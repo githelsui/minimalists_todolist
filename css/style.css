@@ -5,8 +5,9 @@ body {
 }
 .container {
   height: 100%;
+  padding: 100px;
   text-align: center;
-  margin-top: 300px;
+  //margin-top: 300px;
 }
 .click_me {
   background-color: black;
@@ -29,24 +30,62 @@ body {
   border-color: #3e8e41;
 }
 .our_message {
-  height: 100%;
-  padding: 10px;
+  padding: 20px;
 }
 .our_message p {
-  margin: 0;
-  font-size: 30px;
-  text-align: center;
-  color: black;
-  font-style: italic;
   font-family: "Roboto Mono";
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  border-right: .15em solid black; /* The typwriter cursor */
+  white-space: nowrap;; /* Keeps the content on a single line */
+  margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: 2px; /* Adjust as needed */
+  animation:
+     typing 3.5s steps(40, end),
+     blinking-cursor .75s  infinite;
+
 }
 #box {
   background-color: transparent;
   outline: transparent;
+  white-space: nowrap;
+  overflow: hidden;
   width: 100%;
   text-align: center;
   border: transparent;
   padding: 10px;
   font-size: 15px;
   font-family: "Roboto Mono";
+  animation: fadeIn 8s;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blinking-cursor {
+  from, to {
+     border-color: transparent
+   }
+  50% {
+    border-color: black
+  }
+}
+
+@keyframes fadeIn {
+  from{
+    opacity:0;
+  }
+  to{
+    opacity:1;
+  }
+}
+
+@keyframes fadeOut {
+  from{
+    opacity:1;
+  }
+  to{
+    opacity:0;
+  }
 }
