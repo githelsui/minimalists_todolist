@@ -6,6 +6,7 @@ body {
 .container {
   height: 100%;
   padding: 100px;
+  width: 80%;
   text-align: center;
   //margin-top: 300px;
 }
@@ -36,18 +37,18 @@ body {
   font-family: "Roboto Mono";
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid black; /* The typwriter cursor */
-  white-space: nowrap;; /* Keeps the content on a single line */
+  white-space: auto; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 2px; /* Adjust as needed */
   animation:
-     typing 3.5s steps(40, end),
+     typing 2.5s steps(40, end),
      blinking-cursor .75s  infinite;
 
 }
 #box {
   background-color: transparent;
   outline: transparent;
-  white-space: nowrap;
+  white-space: auto;
   overflow: hidden;
   width: 100%;
   text-align: center;
