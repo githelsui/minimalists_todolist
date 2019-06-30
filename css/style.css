@@ -1,0 +1,52 @@
+@import url(https://fonts.googleapis.com/css?family=Rubik+Mono+One);
+@import url(https://fonts.googleapis.com/css?family=Roboto+Mono);
+body {
+  background: #ffff;
+}
+.container {
+  height: 100%;
+  text-align: center;
+  margin-top: 300px;
+}
+.click_me {
+  background-color: black;
+  border-color: gray;
+  color: gray;
+  padding-left: 8px;
+  text-align: center;
+  padding-right: 8px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.click_me p {
+  margin: 0;
+  font-family: Roboto Mono;
+  font-size: 20px;
+}
+.click_me:hover {
+  background-color: #3e8e41;
+  color: white;
+  border-color: #3e8e41;
+}
+.our_message {
+  height: 100%;
+  padding: 10px;
+}
+.our_message p {
+  margin: 0;
+  font-size: 30px;
+  text-align: center;
+  color: black;
+  font-style: italic;
+  font-family: "Roboto Mono";
+}
+#box {
+  background-color: transparent;
+  outline: transparent;
+  width: 100%;
+  text-align: center;
+  border: transparent;
+  padding: 10px;
+  font-size: 15px;
+  font-family: "Roboto Mono";
+}
