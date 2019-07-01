@@ -28,11 +28,12 @@ body {
   padding: 40px;
   white-space: auto;
   height: 100%;
+  border-radius: 30px;
   font-size: 12px;
   margin:10px;
   display: flex;
   margin-bottom: 20px;
-  box-shadow: 0 8px 10px #fff199;
+  box-shadow: 0 8px 10px #ffcc00;
   transition: 0.2s;
   cursor: pointer;
   //min-width: 30%;
@@ -44,10 +45,11 @@ body {
   opacity: 0;
   display: none;
   padding: 5px;
-  /* margin-right: 800px;
-  margin-top: 0px; */
+  margin-top: -70px;
+  border-radius: 20px;
   transition: 0.8s;
   flex-wrap: nowrap;
+  white-space:  nowrap;
   margin: center;
   text-align: center;
   width: 30%

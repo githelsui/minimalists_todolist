@@ -22,7 +22,7 @@ function addItem(){
   var newTask = document.createElement("div");
   var backcard = document.createElement("div");
   var uncheck = document.createElement("img");
-  uncheck.src = "https://img.icons8.com/android/24/000000/checkmark.png";
+  uncheck.src = "https://img.icons8.com/android/24/8bb87d/checkmark.png";
   var trash = document.createElement("img");
   trash.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xOSAyNGgtMTRjLTEuMTA0IDAtMi0uODk2LTItMnYtMTdoLTF2LTJoNnYtMS41YzAtLjgyNy42NzMtMS41IDEuNS0xLjVoNWMuODI1IDAgMS41LjY3MSAxLjUgMS41djEuNWg2djJoLTF2MTdjMCAxLjEwNC0uODk2IDItMiAyem0tMTQtMTl2N2gxNHYtN2gtMTR6bTktM2gtNHYxaDR2LTF6Ii8+PC9zdmc+";
   var taskName = input.value;
@@ -37,7 +37,7 @@ function addItem(){
   fadeIn(newTask);
   input.value = '';
   newTask.addEventListener('click', function(){
-    showOptions(backcard);
+    showOptions(backcard, newTask);
   });
 }
 
@@ -72,7 +72,7 @@ function fadeOut(view){
 function removeItem(){
 }
 
-function showOptions(back){
+function showOptions(back, card){
   if(back.style.display == 'block'){
     fadeOut(back);
 
@@ -80,7 +80,11 @@ function showOptions(back){
   }
   else{
     fadeIn(back);
-
+    var check = back.getElementsByTagName('img')[0];
+    var trash = back.getElementsByClassName('img')[1];
+    check.addEventListener('click', function(){
+        checked(back, check, card);
+    });
   }
 }
 
@@ -89,6 +93,19 @@ function currentDate(){
   return today.getMonth() + "/" + today.getDate() + "/" + today.getFullYear();
 }
 
-function checked(){
-
+function checked(back, img, card){
+  if(card.style.opacity==0.3){
+    card.style.transition='0.5s';
+    card.style.opacity=1;
+    card.style.background="#faf289";
+    card.style.boxShadow = "0 8px 10px #ffcc00";
+    console.log("gray");
+  }
+  else{
+    card.style.transition='0.5s';
+    card.style.opacity=0.3;
+    card.style.background="#a2a3a2";
+    card.style.boxShadow = "0 8px 10px #4d4d4d"
+    console.log("yellow");
+  }
 }
