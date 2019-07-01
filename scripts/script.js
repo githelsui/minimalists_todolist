@@ -21,13 +21,30 @@ function hideBtn(){
 function addItem(){
   var section = document.getElementsByClassName('section')[0];
   var newTask = document.createElement("div");
+  var backcard = document.createElement("div");
+  var uncheck = document.createElement("img");
+  uncheck.src = "/icons/unchecked.svg";
+  var trash = document.createElement("img");
+  trash.src = "/icons/trash.svg";
   var taskName = input.value;
   newTask.className = "card";
-  newTask.innerText = taskName;
+  newTask.innerText = taskName + "\n\n - july 7";
+  backcard.className = "backcard";
+  backcard.appendChild(uncheck);
+  backcard.appendChild(trash);
+  newTask.appendChild(backcard);
   section.appendChild(newTask);
-  console.log("works");
+  //backcard.style.display = 'none';
 }
 
 function removeItem(){
+}
+
+function showOptions(x){
+  x.style.transition='0.8s';
+  x.style.opacity=1;
+}
+
+function checked(){
 
 }
