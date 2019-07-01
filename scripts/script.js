@@ -3,8 +3,8 @@ function showMessage(){
 }
 
 function showBtn(){
- var btn = document.getElementById("click_me").style.display = "none";
+ var btn = document.getElementById("our_message");
   var msg = 'fdfd';
   btn.innerHTML = msg;
-// window.alert('jk');
+ //window.alert('jk');
 }

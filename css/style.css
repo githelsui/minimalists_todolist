@@ -22,6 +22,7 @@ body {
   background-color: black;
   border-color: gray;
   color: gray;
+  margin-top:15px;
   padding-left: 8px;
   text-align: center;
   padding-right: 8px;
@@ -34,9 +35,10 @@ body {
   font-size: 20px;
 }
 .click_me:hover {
-  background-color:black;
+  background-color:green;
   color: white;
   border-color: #3e8e41;
+  cursor: crosshair;
 }
 .our_message {
   padding: 0px;
@@ -46,19 +48,17 @@ body {
 .our_message p {
   font-family: "Roboto Mono";
   font-size: 18px;
-//  background: yellow;
   font-style: italic;
   padding: 0px;
   text-align: center;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid black; /* The typwriter cursor */
-  white-space: auto; /* Keeps the content on a single line */
+  white-space: nowrap; /* Keeps the content on a single line */
   margin: 0 auto; /* Gives that scrolling effect as the typing happens */
   letter-spacing: 2px; /* Adjust as needed */
   animation:
      typing 2.5s steps(40, end),
      blinking-cursor .75s  infinite;
-
 }
 #box {
   background-color: transparent;
@@ -82,10 +82,10 @@ body {
 
 @keyframes blinking-cursor {
   from, to {
-     border-color: transparent
+     border-color: transparent;
    }
   50% {
-    border-color: black
+    border-color: black;
   }
 }
 
@@ -104,5 +104,6 @@ body {
   }
   to{
     opacity:0;
+    visibility: hidden;
   }
 }
