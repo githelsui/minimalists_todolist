@@ -5,11 +5,19 @@ body {
 }
 .container {
   height: 100%;
-  padding: 100px;
-  width: 80%;
+  width: 100%;
+  margin-top:50px;
   text-align: center;
   //margin-top: 300px;
 }
+
+.section{
+  height: 100%;
+  margin-top: 50px;
+  width: 100%;
+  text-align: center;
+}
+
 .click_me {
   background-color: black;
   border-color: gray;
@@ -26,15 +34,22 @@ body {
   font-size: 20px;
 }
 .click_me:hover {
-  background-color: #3e8e41;
+  background-color:black;
   color: white;
   border-color: #3e8e41;
 }
 .our_message {
-  padding: 20px;
+  padding: 0px;
+  margin: 0;
+
 }
 .our_message p {
   font-family: "Roboto Mono";
+  font-size: 18px;
+//  background: yellow;
+  font-style: italic;
+  padding: 0px;
+  text-align: center;
   overflow: hidden; /* Ensures the content is not revealed until the animation */
   border-right: .15em solid black; /* The typwriter cursor */
   white-space: auto; /* Keeps the content on a single line */
@@ -50,10 +65,11 @@ body {
   outline: transparent;
   white-space: auto;
   overflow: hidden;
+  margin-left: 0px;
   width: 100%;
   text-align: center;
   border: transparent;
-  padding: 10px;
+  margin-top:30px;
   font-size: 15px;
   font-family: "Roboto Mono";
   animation: fadeIn 8s;
