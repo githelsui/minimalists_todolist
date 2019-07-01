@@ -22,7 +22,7 @@ function addItem(){
   var newTask = document.createElement("div");
   var backcard = document.createElement("div");
   var uncheck = document.createElement("img");
-  uncheck.src = "https://raw.githubusercontent.com/githelsui/minimalists_todolist/master/icons/checked.svg";
+  uncheck.src = "https://raw.githubusercontent.com/githelsui/minimalists_todolist/master/icons/checked.svg?example=foo&sanitize=true";
   var trash = document.createElement("img");
   trash.src = "/icons/trash.svg";
   var taskName = input.value;
