@@ -41,10 +41,11 @@ body {
   background: white;
   position: absolute;
   opacity: 0;
+  display: none;
   padding: 5px;
   margin-right: 800px;
   margin-top: 0px;
-  transition: 0.2s;
+  transition: 0.8s;
   flex-wrap: nowrap;
   margin: center;
   text-align: center;
