@@ -24,6 +24,7 @@ body {
 
 .card{
   background: #faf289;
+  opacity: 0;
   padding: 40px;
   white-space: auto;
   height: 100%;

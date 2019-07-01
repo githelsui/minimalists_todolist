@@ -28,16 +28,31 @@ function addItem(){
   var taskName = input.value;
   newTask.className = "card";
   newTask.innerText = taskName + "\n\n - " + currentDate();
+  newTask.style.display = 'none';
   backcard.className = "backcard";
   backcard.appendChild(uncheck);
   backcard.appendChild(trash);
   newTask.appendChild(backcard);
   section.appendChild(newTask);
+  fadeIn(newTask);
   input.value = '';
   newTask.addEventListener('click', function(){
     showOptions(backcard);
     console.log("something sn");
   });
+}
+
+function fadeIn(view){
+  var steps = 0;
+  view.style.display = 'block';
+   var timer = setInterval(function() {
+       steps++;
+       view.style.opacity = 0.1 * steps;
+       if(steps >= 20) {
+           clearInterval(timer);
+           timer = undefined;
+       }
+   }, 50);
 }
 
 function removeItem(){
