@@ -16,13 +16,16 @@ body {
   margin-top: 50px;
   width: 100%;
   text-align: center;
+  animation: fadeIn 8s;
+  font-family: "Roboto Mono";
 }
 
 .click_me {
   background-color: black;
   border-color: gray;
   color: gray;
-  margin-top:15px;
+  margin-top:20px;
+  opacity: 0;
   padding-left: 8px;
   text-align: center;
   padding-right: 8px;
@@ -34,12 +37,18 @@ body {
   font-family: Roboto Mono;
   font-size: 20px;
 }
+
 .click_me:hover {
   background-color:green;
   color: white;
   border-color: #3e8e41;
   cursor: crosshair;
 }
+
+.click_me.fade{
+  opacity: 1;
+}
+
 .our_message {
   padding: 0px;
   margin: 0;
