@@ -24,7 +24,7 @@ function addItem(){
   var uncheck = document.createElement("img");
   uncheck.src = "https://img.icons8.com/android/24/000000/checkmark.png";
   var trash = document.createElement("img");
-  trash.src = "https://img.icons8.com/ios/24/000000/delete.png";
+  trash.src = "data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgZmlsbC1ydWxlPSJldmVub2RkIiBjbGlwLXJ1bGU9ImV2ZW5vZGQiPjxwYXRoIGQ9Ik0xOSAyNGgtMTRjLTEuMTA0IDAtMi0uODk2LTItMnYtMTdoLTF2LTJoNnYtMS41YzAtLjgyNy42NzMtMS41IDEuNS0xLjVoNWMuODI1IDAgMS41LjY3MSAxLjUgMS41djEuNWg2djJoLTF2MTdjMCAxLjEwNC0uODk2IDItMiAyem0tMTQtMTl2N2gxNHYtN2gtMTR6bTktM2gtNHYxaDR2LTF6Ii8+PC9zdmc+";
   var taskName = input.value;
   newTask.className = "card";
   newTask.innerText = taskName + "\n\n - " + currentDate();
@@ -81,7 +81,6 @@ function showOptions(back){
   else{
     fadeIn(back);
 
-    console.log("no options yet");
   }
 }
 
