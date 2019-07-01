@@ -22,9 +22,9 @@ function addItem(){
   var newTask = document.createElement("div");
   var backcard = document.createElement("div");
   var uncheck = document.createElement("img");
-  uncheck.src = "https://raw.githubusercontent.com/githelsui/minimalists_todolist/master/icons/checked.svg?example=foo&sanitize=true";
+  uncheck.src = "https://img.icons8.com/android/24/000000/checkmark.png";
   var trash = document.createElement("img");
-  trash.src = "/icons/trash.svg";
+  trash.src = "https://img.icons8.com/ios/24/000000/delete.png";
   var taskName = input.value;
   newTask.className = "card";
   newTask.innerText = taskName + "\n\n - " + currentDate();
