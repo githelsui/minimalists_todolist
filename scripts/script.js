@@ -38,7 +38,6 @@ function addItem(){
   input.value = '';
   newTask.addEventListener('click', function(){
     showOptions(backcard);
-    console.log("something sn");
   });
 }
 
@@ -52,7 +51,22 @@ function fadeIn(view){
            clearInterval(timer);
            timer = undefined;
        }
-   }, 50);
+   }, 30);
+}
+
+function fadeOut(view){
+  var steps = 0;
+   var timer = setInterval(function() {
+       steps++;
+       if(view.style.opacity > 0)
+          view.style.opacity = steps - 0.1;
+       if(steps >= 20) {
+           clearInterval(timer);
+           timer = undefined;
+       }
+   }, 30);
+   view.style.display = 'none';
+   view.style.opacity = 0;
 }
 
 function removeItem(){
@@ -60,14 +74,14 @@ function removeItem(){
 
 function showOptions(back){
   if(back.style.display == 'block'){
-    back.style.display = 'none';
-    back.style.transition='0.8s';
-    back.style.opacity=0;
+    fadeOut(back);
+
+    console.log("options");
   }
   else{
-    back.style.display = 'block';
-    back.style.transition='0.8s';
-    back.style.opacity=1;
+    fadeIn(back);
+
+    console.log("no options yet");
   }
 }
 
