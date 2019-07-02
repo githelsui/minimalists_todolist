@@ -55,36 +55,31 @@ function fadeIn(view){
 }
 
 function fadeOut(view){
-  var steps = 0;
-   var timer = setInterval(function() {
-       steps++;
-       if(view.style.opacity > 0)
-          view.style.opacity = steps - 0.1;
-       if(steps >= 20) {
-           clearInterval(timer);
-           timer = undefined;
-       }
-   }, 30);
-   view.style.display = 'none';
-   view.style.opacity = 0;
+   view.style.transition='0.5s';
+   view.style.opacity=0;
 }
 
-function removeItem(){
+function removeItem(back, card){
+  fadeOut(card);
+  card.style.display = 'none';
 }
 
 function showOptions(back, card){
-  if(back.style.display == 'block'){
-    fadeOut(back);
-
-    console.log("options");
-  }
-  else{
+  if(back.style.opacity == 0){
     fadeIn(back);
     var check = back.getElementsByTagName('img')[0];
-    var trash = back.getElementsByClassName('img')[1];
     check.addEventListener('click', function(){
         checked(back, check, card);
+        //showOptions -> fadeOut is executed
     });
+    var trash = back.getElementsByTagName('img')[1];
+    trash.addEventListener('click', function(){
+        removeItem(back, card);
+    });
+  }
+  else if(back.style.display == 'block'){
+    fadeOut(back);
+    console.log("options");
   }
 }
 
@@ -94,18 +89,8 @@ function currentDate(){
 }
 
 function checked(back, img, card){
-  if(card.style.opacity==0.3){
-    card.style.transition='0.5s';
-    card.style.opacity=1;
-    card.style.background="#faf289";
-    card.style.boxShadow = "0 8px 10px #ffcc00";
-    console.log("gray");
-  }
-  else{
-    card.style.transition='0.5s';
+    card.style.transition='0.2s';
     card.style.opacity=0.3;
     card.style.background="#a2a3a2";
-    card.style.boxShadow = "0 8px 10px #4d4d4d"
-    console.log("yellow");
+    card.style.boxShadow = "0 8px 10px #4d4d4d";
   }
-}
